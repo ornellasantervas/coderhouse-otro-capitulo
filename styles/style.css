@@ -1,0 +1,275 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Music&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* reseteo css */
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* configuraciones generales */
+
+    /* color de fondo de toda la pagina */
+    head {
+        background-color: #F9EFE6;
+    }
+    body {
+        background-color: #F9EFE6;
+    }
+
+    /* sacar fondo a todas las imagenes */
+    img {
+        background: none;
+    }
+
+    /* titulos y textos*/
+    h2{
+        font-family: caveat;
+        font-size: 40px;
+        color: #FC4D18;
+        text-align: center;
+    }
+    h3 {
+        font-family: caveat;
+        font-size: 25px;
+        color: #FC4D18;
+    }
+    h4 {
+        font-family: noto;
+        color: white;
+        font-size: 14px;
+        font-weight: medium;
+        text-align: center;
+    }
+    h5 {
+        font-family: noto;
+        color: white;
+        font-size: 12px;
+        font-weight: lighter;
+        margin-left: 30px;
+    }
+    p {
+        color: #3d3d3d;
+        font-family: noto;
+        font-size: 16px;
+    }
+
+    /* botones */
+    button {
+        background-color: #FF9798;
+        padding: 10px 20px 10px 20px;
+        border: none;
+        margin-top: 20px;
+        border-radius: 15px;
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527) ;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    /* header y menu */
+    header{
+        background-color: #D1C362;
+        width: 96vw;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        /* achicar el height cuando sepa acomodar el menu uno al lado del otro */
+        height: 25vh;
+        border-radius: 20px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+    }
+    .menu a{
+        list-style: none;
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: caveat;
+    }
+
+    /* footer */
+    footer {
+        background-color: #6B2138;
+        height: 30vh;
+        width: 100vw;
+        margin: auto;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+    footer img {
+        width: 30px;
+        background-color: #F9EFE6;
+        padding: 12px;
+        border-radius: 20px;
+        margin-left: 30px;
+    }
+
+
+
+/* home */
+    .portada {
+        width: 98vw;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .resenas img{
+        width: 25vw;
+        border-radius: 50px;
+    }
+
+
+/* pagina sobre mi */
+    #fondo-sobre-mi {
+        background-image: url(../assets/fondo-rayas-verdes.jpg);
+        width: 100vw;
+        margin: 20px 10px 0px 10px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    #texto-sobre-mi {
+        background-color: #B8D8FF;
+        margin: 50px 50px 50px 80px;
+        padding: 10px;
+        width: 40vw;
+        height:450px;
+        border-radius: 25px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527) ;
+        justify-content: right;
+    }
+    .sobre-mi-titulo {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+    #texto-sobre-mi p {
+        margin: 0px 50px 10px 50px;
+    }
+    #img-sobre-mi {
+        /* como ponerle sombra que respete le forma de la imagen? */
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527) ;
+    }
+
+
+/* blog */
+    .blog {
+        background-image: url(../assets/fondo-soles.jpg);
+    }
+    .tarjeta-blog {
+        background-color: white;
+        margin: 10px;
+        border-radius: 20px;
+        padding: 10px;
+        /* una vez que sepa poner el texto al lado de la imagen ajustar la altura a 300px */
+        height: fit-content;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527) ;
+    }
+    .tarjeta-blog img {
+        height: 300px;
+        border-radius: 15px;
+    }
+    .tarjeta-blog h3{
+        color: black;
+    }
+
+/* reseñas */
+    #banda-divisora {
+        width: 100vw;
+    }
+    .tarjeta-resenas li{
+        background-color: white;
+        width: 25vw;
+        margin: 10px;
+        border-radius: 20px;
+        padding: 10px;
+        height: fit-content;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+        justify-items: center;
+    }
+    .tarjeta-resenas img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    .tarjeta-resenas p {
+        /* no me funciona */
+        justify-self: right;
+    }
+    .tarjeta-resenas h3 {
+        color: black;
+    }
+
+/* escribime */
+    #fondo-escribime {
+        background-image: url(../assets/fondo-oscuro-estrellas.jpg);
+        background-repeat:round;
+        margin: 10px;
+        border-radius: 20px;
+        /* ver como hacer que la opacidad se aplique solo a este elemento */
+        opacity: 100%;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+    }
+    #img-escribime {
+        margin-left: 50px;
+        margin-top: 20px;
+        border-radius: 20px;
+        width: 30vw;
+        opacity: 100%;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+    }
+    /* formulario */
+    #formulario{
+        background-color: #FFC7C7;
+        border-radius: 20px;
+        width: 30vw;
+        margin-top: 20px;
+        margin-left: 50px;
+        text-align: center;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+    }
+    #formulario input{
+        margin: 5px;
+        width: 400px;
+        height: 30px;
+        border-style: none;
+        border-radius: 10px;
+        text-align: center;
+    }
+    textarea{
+        margin: 5px;
+        width: 400px;
+        height: 80px;
+        border-style: none;
+        border-radius: 10px;
+        text-align: center;
+        font-family: noto;
+        font-size: 15px;
+        color: grey;
+    }
+    #formulario select{
+        margin: 5px;
+        width: 400px;
+        height: 30px;
+        border-style: none;
+        border-radius: 10px;
+        text-align: center;
+        color: gray;
+    }
+    /* no puedo cambiar el color, tipogrfia y posicion de los placeholder ni de las opciones del formulario. Por lo que lei hay que usar pseudoclases? */
+    #formulario option {
+        color: #3d3d3d;
+    }
+    #formulario button {
+        margin-bottom: 10px;
+    }
+    
+
+
