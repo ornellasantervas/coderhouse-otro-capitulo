@@ -228,6 +228,7 @@
         justify-content: space-around;
         align-items: center;
     }
+
     #texto-sobre-mi {
         background-color: #B8D8FF;
         padding: 10px;
@@ -246,6 +247,15 @@
     }
     #img-sobre-mi {
         width: 30%;
+    }
+
+    @media (max-width: 768px) {
+        #fondo-sobre-mi {
+            flex-direction: column;
+    }
+    #texto-sobre-mi {
+        width: 90%;
+    }
     }
 
 /* blog */
@@ -276,7 +286,35 @@
         margin: 0 50px 20px 50px;
         justify-content: space-between;
     }
+    .leer-mas {
+        margin-top: 0;
+    }
 
+        @media (max-width: 768px) {
+        .tarjeta-blog {
+            height: fit-content;
+        }
+        .tarjeta-blog img {
+            height: 100%;
+            width: 50%;
+        }
+        .texto-tarjeta-blog {
+        margin: 10px 10px 20px 10px;
+    }
+    }
+
+    @media (max-width: 426px) {
+        .tarjeta-blog {
+        flex-direction: column;
+        height: fit-content;
+        }
+        .texto-tarjeta-blog {
+        align-items: center;
+        }
+        .tarjeta-blog img {
+            width: auto;
+        }
+    }
 
 /* reseñas */
     #carouselExampleIndicators {
@@ -326,7 +364,7 @@
             grid-template-columns: 1fr 1fr;
     }
     }
-    
+
     @media (max-width: 426px){
         .tarjeta-resenas {
             grid-template-columns: 1fr;
