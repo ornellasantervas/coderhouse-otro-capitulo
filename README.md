@@ -16,6 +16,7 @@ El objetivo del proyecto fue aplicar todos los conocimientos adquiridos durante 
 
 - HTML5
 - CSS3
+- SASS
 - Flexbox & Grid
 - Animaciones CSS
 - Git & GitHub
