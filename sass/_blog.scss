@@ -1,0 +1,72 @@
+@use 'variables' as v;
+
+.blog {
+    background-image: url(../assets/fondo-soles.jpg);
+    main {
+        section {
+            @extend .flex-row;
+            justify-content: center;
+            }
+            .lista-blog{
+                padding: 0;
+                .tarjeta-blog{
+                    @extend .tarjetas;
+                    height: 300px;
+                    display: flex;
+                    @include v.tablet{
+                        height: fit-content;
+                    }
+                    @include v.mobile{
+                        flex-direction: column;
+                        height: fit-content;
+                    }
+
+                    img{
+                        @include v.estilo-imagen(auto, auto, v.$radio-esquinas);
+                        @include v.tablet{
+                            @include v.estilo-imagen(50%, 100%, v.$radio-esquinas);
+                        }
+                        @include v.mobile{
+                            width: 100%;
+                        }
+                    }
+
+                    .texto-tarjeta-blog{
+                        @extend .flex-column;
+                        margin: 0 50px;
+                        @include v.tablet {
+                            // flex-direction: row;
+                            margin: 10px 10px 20px 10px;
+                        }
+                        @include v.mobile{
+                            align-items: center;
+                        }
+                        h3{
+                            color: black;
+                            text-align: left;
+                        }
+                        p{
+                            text-align: left;
+                        }
+                        .leer-mas{
+                            margin-top: 0;
+                        }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 426px) {
+    .tarjeta-blog {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .texto-tarjeta-blog {
+        align-items: center;
+    }
+    .tarjeta-blog img {
+        width: auto;
+    }
+}

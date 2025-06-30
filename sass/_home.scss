@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+
+section {
+    width: v.$ancho-total;
+    margin: auto;
+    img{
+        @include v.estilo-imagen(100%, auto, 0);
+    }
+}
+
+main {
+    @extend .flex-column;
+    .resenas {
+        @include v.grid-col (grid, 1fr 1fr 1fr);
+        @include v.tablet{
+            @include v.grid-col (grid, 1fr 1fr);
+        }
+        @include v.mobile{
+            @include v.grid-col (grid, 1fr);
+        }
+
+        article{
+            margin: 15px;
+            border-radius: v.$radio-esquinas;
+            box-shadow: v.$sombra;
+            @include v.mobile{
+                height: 100px;
+                overflow: hidden;
+            }
+            img {
+                @include v.estilo-imagen(100%, auto, v.$radio-esquinas);
+                @include v.mobile{
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

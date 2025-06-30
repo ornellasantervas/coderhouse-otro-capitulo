@@ -1,0 +1,30 @@
+@use 'header';
+@use 'variables' as v;
+@use 'footer';
+@use 'home';
+@use 'sobre-mi';
+@use 'blog';
+@use 'resenas';
+@use 'escribime';
+
+
+
+h2{
+    @include v.texto-estilos (v.$tipografia-principal, 35px, v.$color-principal, center)
+}
+
+h3 {
+    @include v.texto-estilos (v.$tipografia-principal, 25px, v.$color-principal, center)
+}
+
+h4 {
+    @include v.texto-estilos (v.$tipografia-secundaria, 14px, v.$color-fondo, center)
+}
+
+h5 {
+    @include v.texto-estilos (v.$tipografia-secundaria, 12px, v.$color-fondo, center)
+}
+
+p {
+    @include v.texto-estilos (v.$tipografia-secundaria, 16px, #3d3d3d, center)
+}

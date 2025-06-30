@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+#fondo-sobre-mi {
+        background-image: url(../assets/fondo-rayas-verdes.jpg);
+        width: v.$ancho-total;
+        margin: 10px auto;
+        border-radius: v.$radio-esquinas;
+        @extend .flex-row;
+        justify-content: space-around;
+        @include v.tablet{
+            @media (max-width: 768px){
+                flex-direction: column;
+            };
+        }
+    #texto-sobre-mi{
+        background-color: #B8D8FF;
+        padding: 10px;
+        width: 50%;
+        height: fit-content;
+        border-radius: v.$radio-esquinas;
+        box-shadow: v.$sombra ;
+        justify-content: right;
+        margin: 15px 0;
+        @extend .flex-column;
+        @include v.tablet{
+            @media (max-width: 768px){
+                width: 90%;
+            };
+        }
+        h3 {   
+            margin: 10px 50px;
+        }
+    }
+    #img-sobre-mi {
+            width: 30%;
+            @include v.tablet{
+                @media (max-width: 768px){
+                    width: 70%;
+                };
+        }
+    }
+}

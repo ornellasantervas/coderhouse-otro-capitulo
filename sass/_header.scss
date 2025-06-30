@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+header {
+    nav{
+        background-color:  v.$color-destaque;
+        border-radius: v.$radio-esquinas;
+        box-shadow: v.$sombra;
+        align-self: center;
+        width: v.$ancho-total;
+        height: auto;
+        margin: 10px auto;
+        padding: 5px; 
+        div{
+            .logo {
+                height: 40px;
+                margin-left: 15px;
+                @include v.mobile{
+                height: 30px;
+            }
+            }
+            .custom-toggler {
+                border: none;
+                background-color: transparent;
+                padding: 8px;
+
+                .hamburger-icon {
+                    width: 30px;
+                    height: 30px;
+
+                    rect {
+                    fill: v.$color-principal;
+                    }
+
+                    &:hover rect {
+                    fill: v.$color-destaque-secundario;
+                    border: none;
+                    }
+                }
+            }
+            div {
+                div{
+                    .nav-link {
+                        color: white;
+                        font-size: 24px;
+                        font-family: v.$tipografia-principal;
+                        margin: 0 15px;
+                        justify-content: end;
+                        &:hover{
+                            color:v.$color-secundario;
+                        }
+                        &.actual {
+                            color: v.$color-principal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

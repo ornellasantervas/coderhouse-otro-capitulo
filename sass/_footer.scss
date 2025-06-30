@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+footer {
+    background-color: v.$color-destaque-secundario;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    @extend .flex-row;
+    @include v.tablet{
+        height: 150px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+        .derechos-reservados {
+            margin-left: 30px;
+            @include v.tablet{
+                margin-left: 0px;
+        }
+        }
+        .redes {
+            display: flex;
+            .logo-redes{
+                width: 30px;
+                height: 30px;
+                padding: 1px;
+                background-color: v.$color-fondo;
+                border-radius: v.$radio-esquinas;
+                margin-right: 30px;
+                    img{
+                        width: 100%;
+                        padding: 3px;
+                    }
+            }
+        }
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: 150px;
+        // @extend .flex-column;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .derechos-reservados {
+        margin-left: 0px;
+    }
+}

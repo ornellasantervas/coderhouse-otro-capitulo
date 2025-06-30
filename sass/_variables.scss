@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Music&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Configuraciones generales
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+head {
+    background-color: #F9EFE6;
+}
+body {
+    background-color: #F9EFE6;
+}
+img {
+    background: none;
+}
+
+// Variables
+$color-fondo: #F9EFE6;
+$color-principal: #FC4D18;
+$color-secundario: #FF9798;
+$color-destaque: #D1C362;
+$color-destaque-secundario: #6B2138;
+
+$tipografia-principal: caveat;
+$tipografia-secundaria: noto;
+
+$radio-esquinas: 20px;
+
+$sombra: 1px 2px 5px rgba(0, 0, 0, 0.527);
+
+$ancho-total: 96%;
+
+// Mixings
+
+@mixin texto-estilos($texto-fuente, $texto-tamano, $texto-color, $texto-alineacion) {
+    font-family: $texto-fuente;
+    font-size: $texto-tamano;
+    color: $texto-color;
+    text-align: $texto-alineacion;
+}
+@mixin estilo-imagen($ancho, $alto, $img-radio-esquinas){
+    width: $ancho;
+    height: $alto;
+    border-radius: $img-radio-esquinas;
+}
+
+@mixin mobile{
+    @media (max-width: 426px){
+        @content
+    };
+}
+
+@mixin tablet{
+    @media (max-width: 768px){
+        @content
+    };
+}
+
+@mixin grid-col ($grid, $col) {
+    display: grid;
+    grid-template-columns: $col;
+}
+
+// Extends
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid-3-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.tarjetas {
+    background-color: $color-fondo;
+    margin: 10px;
+    padding: 10px;
+    border-radius: $radio-esquinas;
+    box-shadow: $sombra;
+}
+
+.boton-personalizado {
+    background-color: #FF9798;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+    }
+.boton-personalizado:hover {
+        background-color: #e05a5c;       
+    }
+
+.campos-formulario {
+    margin: 5px 0;
+    width: 90%;
+    height: 30px;
+    border-style: none;
+    border-radius: 10px;
+    text-align: center;
+    font-family: noto;
+    font-size: 15px;
+    color: grey;
+}
+
+    // no funciona
+    .navbar-toggler-icon {
+        filter: invert(100%);
+        color: $color-destaque-secundario
+    }

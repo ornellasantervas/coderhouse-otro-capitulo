@@ -1,0 +1,67 @@
+@use 'variables' as v;
+
+#fondo-escribime {
+        background-image: url(../assets/fondo-oscuro-estrellas.jpg);
+        background-repeat:round;
+        border-radius: v.$radio-esquinas;
+        box-shadow: v.$sombra;
+        width: v.$ancho-total;
+        height: 80vh;
+        position: center;
+        margin: 0 auto 20px auto;
+        @extend .flex-row;
+        @include v.tablet{
+                flex-direction: column;
+                height: fit-content;
+                padding: 10px 0;
+        }
+    
+        #img-escribime {
+            @include v.estilo-imagen(45%, 90%, v.$radio-esquinas);
+            box-shadow: v.$sombra;
+            overflow: hidden;
+            @include v.tablet{
+                @include v.estilo-imagen(90%, 300px, v.$radio-esquinas);
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        #formulario {
+            @include v.estilo-imagen(45%, 90%, v.$radio-esquinas);
+            background-color: #FFC7C7;
+            text-align: center;
+            box-shadow: v.$sombra;
+            @extend .flex-column;
+            justify-content: center;
+            align-items: center;
+            @include v.tablet{
+                width: 90%;
+                height: 450px;
+            }
+
+        form {
+            width: 100%;
+            input{
+                @extend .campos-formulario;
+            }
+            textarea{
+                @extend .campos-formulario;
+                height: 80px;
+            }
+            select{
+                @extend .campos-formulario;
+            }
+            option {
+                color: #3d3d3d;
+    }
+        }
+
+    }
+}
