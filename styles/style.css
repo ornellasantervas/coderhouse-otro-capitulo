@@ -181,7 +181,7 @@ footer .redes .logo-redes img {
   width: 96%;
   height: 350px;
   margin: auto;
-  background-image: url(/assets/portada-libros-varios.jpg);
+  background-image: url(/assets/portada-libros-varios.webp);
   background-size: cover;
   border-radius: 20px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
@@ -407,7 +407,7 @@ main .seccion-resenas .todas-resenas .tarjeta-resenas li h3 {
 }
 
 #fondo-escribime {
-  background-image: url(../assets/fondo-oscuro-estrellas.jpg);
+  background-image: url(../assets/fondo-oscuro-estrellas.webp);
   background-repeat: round;
   border-radius: 20px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
