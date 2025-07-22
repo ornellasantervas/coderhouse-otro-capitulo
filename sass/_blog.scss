@@ -9,12 +9,14 @@
             }
             .lista-blog{
                 padding: 0;
+                height: auto;
+                width: v.$ancho-total;
                 .tarjeta-blog{
                     @extend .tarjetas;
-                    height: 300px;
                     display: flex;
                     @include v.tablet{
                         height: fit-content;
+                        align-items: center;
                     }
                     @include v.mobile{
                         flex-direction: column;

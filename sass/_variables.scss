@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Music&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
 
 // Configuraciones generales
 *{
@@ -27,6 +29,7 @@ $color-destaque-secundario: #6B2138;
 
 $tipografia-principal: caveat;
 $tipografia-secundaria: noto;
+$tipografia-logo: Bagel Fat One;
 
 $radio-esquinas: 20px;
 
@@ -36,11 +39,12 @@ $ancho-total: 96%;
 
 // Mixings
 
-@mixin texto-estilos($texto-fuente, $texto-tamano, $texto-color, $texto-alineacion) {
+@mixin texto-estilos($texto-fuente, $texto-tamano, $texto-color, $texto-alineacion, $texto-peso) {
     font-family: $texto-fuente;
     font-size: $texto-tamano;
     color: $texto-color;
     text-align: $texto-alineacion;
+    font-weight: $texto-peso;
 }
 @mixin estilo-imagen($ancho, $alto, $img-radio-esquinas){
     width: $ancho;
@@ -120,9 +124,3 @@ $ancho-total: 96%;
     font-size: 15px;
     color: grey;
 }
-
-    // no funciona
-    .navbar-toggler-icon {
-        filter: invert(100%);
-        color: $color-destaque-secundario
-    }

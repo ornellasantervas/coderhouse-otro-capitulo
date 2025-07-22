@@ -8,13 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <link    rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  />
+    <!-- seo -->
+    <meta name="description" content="Blog literario con reseñas de libros, reflexiones personales y citas destacadas. En Otro Capítulo comparto lo que leo y lo que pienso entre líneas.">
+    <meta name="keywords" content="libros, subrayados, citas de libros, blog de libros, reseñas de libros, reflexiones sobre lecturas, libros recomendados, citas literarias, frases de libros, literatura contemporánea">
+    <meta name="author" content="Ornella Santervas">
+    <meta name="owner" content="Sophia">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid flex-row">
-                <img src="./assets/otrocapítulo.png" alt="Logo de otrocapítulo" class="logo">
+                <img src="./assets/otrocapítulo.png" alt="Logo de otrocapítulo" class="logo" title="logo otro capitulo">
                 <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="24" height="24">
                     <rect width="100" height="10" rx="5" fill="white"/>
@@ -33,29 +38,33 @@
             </div>
         </nav>
         
-        <section class="espacio-portada">
-            <img src="./assets/portada-con-logo.png" alt="imagen de varios libros con logo de la marca" class="portada animate__animated animate__slideInDown">
+        <section class="espacio-portada portada animate__animated animate__slideInDown">
+            <section id="titulo">
+                <h1>otrocapítulo</h1>
+                <!-- <img src="/assets/otrocapítulo.png" alt="logo tipografico con el texto Otro Capítulo"> -->
+                <h2>Un blog sobre historias leídas, pensamientos propios y algunos subrayados</h2>
+            </section>
         </section>
     </header>
 
     <main>
-        <h2>últimas reseñas</h2>
+        <h3>últimas reseñas</h3>
         <section class="resenas">
             <article>
-                <img src="./assets/portada-libro-dear-people-in-somewhere.jpg" alt="foto de portada del libro Dear People in Somewhere">
+                <img src="./assets/portada-libro-dear-people-in-somewhere.jpg" alt="foto de portada del libro Dear People in Somewhere" title="Portada Dear People in Somewhere">
             </article>
             <article>
-                <img src="./assets/portada-libro-love-&-olives.jpg" alt="foto de portada del libro Love & Olives">
+                <img src="./assets/portada-libro-love-&-olives.jpg" alt="foto de portada del libro Love & Olives" title="Portada Love & Olives">
             </article>
             <article>
-                <img src="./assets/portada-libro-the-women-destroyed.jpg" alt="foto de portada del libro The Women Destroyed">
+                <img src="./assets/portada-libro-the-women-destroyed.jpg" alt="foto de portada del libro The Women Destroyed" title="Portada The Women Destroyed">
             </article>
         </section>
     </main>
 
     <footer>
-            <h5 class="derechos-reservados">derechos reservados</h5>
-            <h4 class="footer">hecho con ❤️ por Orne</h4>
+            <p class="footer derechos-reservados">derechos reservados</p>
+            <p class="footer">hecho con ❤️ por Orne</p>
             <!-- redes sociales -->
         <ul class="redes">
             <li class="logo-redes">

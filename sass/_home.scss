@@ -1,11 +1,31 @@
 @use 'variables' as v;
 
 
-section {
+.espacio-portada {
     width: v.$ancho-total;
+    height: 350px;
     margin: auto;
-    img{
-        @include v.estilo-imagen(100%, auto, 0);
+    background-image: url(/assets/portada-libros-varios.jpg);
+    background-size: cover;  
+    border-radius: v.$radio-esquinas;
+    box-shadow: v.$sombra;
+    @extend .flex-row;
+    justify-content: center;
+
+    #titulo{
+        @extend .flex-row;
+        justify-content: center;
+        background-color: #B8D8FF;
+        border-radius: v.$radio-esquinas;
+        width: 750px;
+        padding: 30px 0;
+        img{
+            margin: 15px 0;
+        }
+        @include v.tablet{
+                    width: 90%;
+                    padding: 10px
+        }
     }
 }
 
@@ -24,10 +44,6 @@ main {
             margin: 15px;
             border-radius: v.$radio-esquinas;
             box-shadow: v.$sombra;
-            @include v.mobile{
-                height: 100px;
-                overflow: hidden;
-            }
             img {
                 @include v.estilo-imagen(100%, auto, v.$radio-esquinas);
                 @include v.mobile{

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Music&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,13 +20,13 @@ img {
   background: none;
 }
 
-.flex-column, #fondo-escribime #formulario, main, main .seccion-resenas, .blog main .lista-blog .tarjeta-blog .texto-tarjeta-blog, #fondo-sobre-mi #texto-sobre-mi {
+.flex-column, #fondo-escribime #formulario, main, main .seccion-resenas, main .seccion-resenas .todas-resenas .tarjeta-resenas li, .blog main .lista-blog .tarjeta-blog .texto-tarjeta-blog, #fondo-sobre-mi #texto-sobre-mi {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
 }
 
-.flex-row, #fondo-escribime, .blog main section, #fondo-sobre-mi, footer {
+.flex-row, #fondo-escribime, .blog main section, #fondo-sobre-mi, .espacio-portada, .espacio-portada #titulo, footer {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -73,11 +74,6 @@ img {
   font-family: noto;
   font-size: 15px;
   color: grey;
-}
-
-.navbar-toggler-icon {
-  filter: invert(100%);
-  color: #6B2138;
 }
 
 header nav {
@@ -144,6 +140,9 @@ footer {
     justify-content: space-around;
   }
 }
+footer .footer {
+  color: white;
+}
 footer .derechos-reservados {
   margin-left: 30px;
 }
@@ -178,14 +177,31 @@ footer .redes .logo-redes img {
     margin-left: 0px;
   }
 }
-section {
+.espacio-portada {
   width: 96%;
+  height: 350px;
   margin: auto;
+  background-image: url(/assets/portada-libros-varios.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
+  justify-content: center;
 }
-section img {
-  width: 100%;
-  height: auto;
-  border-radius: 0;
+.espacio-portada #titulo {
+  justify-content: center;
+  background-color: #B8D8FF;
+  border-radius: 20px;
+  width: 750px;
+  padding: 30px 0;
+}
+.espacio-portada #titulo img {
+  margin: 15px 0;
+}
+@media (max-width: 768px) {
+  .espacio-portada #titulo {
+    width: 90%;
+    padding: 10px;
+  }
 }
 
 main .resenas {
@@ -208,12 +224,6 @@ main .resenas article {
   margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.527);
-}
-@media (max-width: 426px) {
-  main .resenas article {
-    height: 100px;
-    overflow: hidden;
-  }
 }
 main .resenas article img {
   width: 100%;
@@ -274,14 +284,16 @@ main .resenas article img {
 }
 .blog main .lista-blog {
   padding: 0;
+  height: auto;
+  width: 96%;
 }
 .blog main .lista-blog .tarjeta-blog {
-  height: 300px;
   display: flex;
 }
 @media (max-width: 768px) {
   .blog main .lista-blog .tarjeta-blog {
     height: fit-content;
+    align-items: center;
   }
 }
 @media (max-width: 426px) {
@@ -381,17 +393,14 @@ main .seccion-resenas .todas-resenas .tarjeta-resenas {
   }
 }
 main .seccion-resenas .todas-resenas .tarjeta-resenas li {
+  align-items: center;
   height: fit-content;
-  justify-items: center;
 }
 main .seccion-resenas .todas-resenas .tarjeta-resenas li img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: contain;
-}
-main .seccion-resenas .todas-resenas .tarjeta-resenas li p {
-  justify-self: right;
 }
 main .seccion-resenas .todas-resenas .tarjeta-resenas li h3 {
   color: black;
@@ -406,6 +415,7 @@ main .seccion-resenas .todas-resenas .tarjeta-resenas li h3 {
   height: 80vh;
   position: center;
   margin: 0 auto 20px auto;
+  justify-content: space-around;
 }
 @media (max-width: 768px) {
   #fondo-escribime {
@@ -461,25 +471,36 @@ main .seccion-resenas .todas-resenas .tarjeta-resenas li h3 {
   color: #3d3d3d;
 }
 
-h2 {
-  font-family: caveat;
-  font-size: 35px;
+h1 {
+  font-family: Bagel Fat One;
+  font-size: 56px;
   color: #FC4D18;
   text-align: center;
+  font-weight: light;
+}
+
+h2 {
+  font-family: caveat;
+  font-size: 25px;
+  color: #6B2138;
+  text-align: center;
+  font-weight: bold;
 }
 
 h3 {
   font-family: caveat;
-  font-size: 25px;
+  font-size: 35px;
   color: #FC4D18;
   text-align: center;
+  font-weight: bold;
 }
 
 h4 {
-  font-family: noto;
-  font-size: 14px;
-  color: #F9EFE6;
+  font-family: caveat;
+  font-size: 25px;
+  color: #FC4D18;
   text-align: center;
+  font-weight: light;
 }
 
 h5 {
@@ -487,13 +508,15 @@ h5 {
   font-size: 12px;
   color: #F9EFE6;
   text-align: center;
+  font-weight: light;
 }
 
 p {
   font-family: noto;
-  font-size: 16px;
+  font-size: 14px;
   color: #3d3d3d;
   text-align: center;
+  font-weight: light;
 }
 
 /*# sourceMappingURL=style.css.map */
