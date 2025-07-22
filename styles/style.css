@@ -277,7 +277,7 @@ main .resenas article img {
 }
 
 .blog {
-  background-image: url(../assets/fondo-soles.jpg);
+  background-image: url(../assets/fondo-soles.webp);
 }
 .blog main section {
   justify-content: center;

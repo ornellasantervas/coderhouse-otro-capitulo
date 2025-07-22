@@ -1,7 +1,7 @@
 @use 'variables' as v;
 
 .blog {
-    background-image: url(../assets/fondo-soles.jpg);
+    background-image: url(../assets/fondo-soles.webp);
     main {
         section {
             @extend .flex-row;
