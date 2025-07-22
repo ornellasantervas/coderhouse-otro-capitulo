@@ -364,6 +364,11 @@ main #carouselExampleIndicators {
   align-items: center;
   margin-bottom: 5px;
 }
+@media (max-width: 426px) {
+  main #carouselExampleIndicators {
+    height: auto;
+  }
+}
 main #carouselExampleIndicators .carousel-inner {
   height: 100%;
   border-radius: 20px;
